@@ -6,13 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import Amplify, { AuthModeStrategyType } from 'aws-amplify'
 import awsconfig from './aws-exports'
 
-const myAppConfig = {
-    "aws_appsync_graphqlEndpoint": "https://api.testrub.com/graphql",
-}
-
 Amplify.configure({
   ...awsconfig,
-  ...myAppConfig,
   DataStore: {
     authModeStrategyType: AuthModeStrategyType.DEFAULT
   }
